@@ -27,8 +27,9 @@ RUN mkdir /home/download
 RUN mkdir /home/script
 RUN mkdir /home/plugins
 
-#RUN git clone https://github.com/Damianonymous/streamlink-plugins.git
-#RUN cp /streamlink-plugins/*.py /home/plugins/
+# add Chzzk plugin
+RUN git clone https://github.com/park-onezero/streamlink-plugin-chzzk streamlink-plugins
+RUN cp /streamlink-plugins/*.py /home/plugins/
 
 COPY ./streamlink-recorder.sh /home/script/
 COPY ./entrypoint.sh /home/script
