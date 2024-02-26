@@ -30,6 +30,8 @@ RUN mkdir /home/plugins
 # add Chzzk plugins
 RUN git clone https://github.com/park-onezero/streamlink-plugin-chzzk streamlink-plugins
 RUN cp /streamlink-plugins/*.py /home/plugins/
+RUN pip3 install rsa
+RUN pip3 install lzstring
 
 COPY ./streamlink-recorder.sh /home/script/
 COPY ./entrypoint.sh /home/script
