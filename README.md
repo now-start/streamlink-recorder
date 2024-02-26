@@ -34,7 +34,7 @@ docker run -v /home/:/home/download -e streamLink='twitch.tv/twitch' -e streamQu
 
 `streamName` - name for the stream.
 
-`streamOptions` - streamlink flags (--twitch-disable-reruns, separated by space, see [Plugins](https://streamlink.github.io/plugins.html))
+`streamOptions` - streamlink flags (ex. Chzzk `--ffmpeg-copyts --plugin-dirs home/plugins`, separated by space, see [Plugins](https://streamlink.github.io/plugins.html))
 
 `uid` - USER ID, map to your desired User ID (fallback to 9001)
 
