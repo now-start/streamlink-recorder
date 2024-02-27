@@ -17,7 +17,7 @@ ENV streamlinkCommit=57dacf7bc9ee1f5793f8aa3c715220ded19653f6
 #	cd /opt/streamlink-${streamlinkVersion}/ && \
 #	python3 setup.py install
 
-RUN apt-get update && apt-get install gosu && apt-get install python3-pip -y
+RUN apt-get update && apt-get install gosu && apt-get install python3-pip -y && apt-get install ffmpeg -y
 
 RUN pip3 install --upgrade git+https://github.com/streamlink/streamlink.git@${streamlinkCommit}
 
